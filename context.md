@@ -2,6 +2,7 @@
 
 ## Brand & Positioning
 - **Name / handle:** Matthew Bis, LinkedIn personal brand under his own name
+- **Current LinkedIn headline:** GTM Engineer | AI Automation & RevOps | LLM Orchestration - n8n, LangGraph, Python, Salesforce | Fluent German/Arabic
 - **LinkedIn:** https://www.linkedin.com/in/matthewjbis/
 - **Personal site:** https://mattbis.com/
 - **Leverage:** https://leverage.mattbis.com/
@@ -9,12 +10,23 @@
 - **Positioning:** Practitioner over trend-chaser. Production honesty ("what broke"), senior deterministic judgment in an agent-saturated market, RevOps/outbound GTM infrastructure built with real systems.
 - **Core philosophical stance:** Deterministic pipelines are preferable to premature agentic architecture. Autonomy is added only where task shape forces it, and earned over time - a temporal argument, not a spatial one.
 
+## Background & Skills
+(Ground truth for grounding drafts - do not state a fact about Matthew that isn't listed here; write around a personal detail rather than guess at it.)
+- **Current professional framing:** GTM Engineer, AI Automation & RevOps
+- **Technical stack referenced in his own headline:** LLM orchestration, n8n, LangGraph, Python, Salesforce
+- **Languages:** Fluent in German and Arabic (in addition to English)
+- **Career path note (per his own posts):** came to AI through language rather than through code ("Linguistic precision" post) - this is a recurring personal narrative beat, not just a one-off line
+- **Education:** not yet documented here - do not invent degrees, schools, or dates
+- **Prior employment history:** not documented here beyond what's already public on LinkedIn - do not invent employer names or titles; this content operates independently of any employer/client, so employer names should never appear in generated posts regardless of what's true
+
 ## Content Pillars
 1. Multi-agent architecture
 2. Outbound/email and cold outreach
 3. AI in production
 4. GTM infrastructure/RevOps
 5. Career/positioning
+
+**Actual published distribution (as of July 31, 2026):** Multi-agent architecture and Career/positioning are carrying most of the volume (5 of 10 posts touch one or both). GTM infrastructure has one real entry. Outbound & email has exactly one (the cold-email copywriters post) - it's live, but thin. AI in production has never been a lead pillar, only a co-tag. Bias next-topic selection toward Outbound and AI-in-production until they catch up.
 
 ## Hard Content Rules
 - No em-dashes
@@ -37,10 +49,36 @@
 
 ---
 
-## PUBLISHED CONTENT (chronological where known)
+## PUBLISHED CONTENT (chronological, per LinkedIn activity - dates before mid-July are approximate, LinkedIn only shows relative buckets like "3mo")
 
-### 1. "The carpenter who refused to use a nail gun" - Career/Positioning
-*Posted: Thursday, April 9th*
+### 1. "Stop asking one prompt to do five jobs" - Multi-agent Architecture
+*~March 31, 2026 - 584 impressions*
+*Carousel + caption*
+
+Stop asking one prompt to do five jobs.
+
+Research the company. Write the email. Score the lead. Check quality. Format the output. One prompt, one pass.
+
+Works in a demo. Falls apart in production.
+
+The model hallucinates details it wasn't given. You can't debug it because the whole thing is one black box. And your token costs are 10x what they should be.
+
+The fix is architectural, not prompt engineering.
+
+Decompose into specialized nodes. One agent researches. One writes. One QAs. One scores. Pick the right model per node - cheap and fast for filtering, heavy for reasoning.
+
+Something breaks? You know exactly where. Fix that node. Everything else keeps running.
+
+I've run this pattern in production: hundreds of CRM records daily through a four-agent chain. v1 was one mega-prompt. It hallucinated confidently and invented things that didn't exist. Decomposition fixed it.
+
+If your AI works in testing but fails in production, it's not a prompt problem. It's an architecture problem.
+
+**Carousel visual:** Side-by-side comparison - "The mega-prompt" (single prompt doing research/write/score/check/format, all competing for context -> hallucinations, undebuggable black box, 10x token cost) vs. "Decomposed agents" (Research agent -> Copywriter agent -> QA/evaluator -> Scoring agent -> no more hallucinations, transparent and debuggable, reduced token cost).
+
+---
+
+### 2. "The carpenter who refused to use a nail gun" - Career/Positioning
+*April 9, 2026 - 382 impressions*
 
 The carpenter who refused to use a nail gun didn't become a better carpenter. He became slower, more expensive, and eventually irrelevant.
 
@@ -78,29 +116,33 @@ Adapt or become the cautionary tale you keep warning everyone about.
 
 ---
 
-### 2. "Stop saving prompts" - GTM Infrastructure / Context Ops seed
-*Posted: June 9th, 2026*
+### 3. "Two copywriters who've been dead for decades are outwriting your AI" - Outbound & Email
+*~April 30, 2026 - 259 impressions*
+*Carousel*
 
-Stop saving prompts.
+Two copywriters who've been dead for decades are outwriting your AI.
 
-There's a name for what a prompt library really is: the Collector's Fallacy. The belief that saving something is the same as knowing it. You bookmark the clever prompt, feel a hit of progress, and learn nothing. A stack of answers to a test you never studied for.
+Not because AI can't write cold email. It can.
 
-A prompt isn't a shortcut around thinking. It's the output of thinking. The best one you'll ever write is the one you build in the moment, because you understand the problem in front of you.
+Because everyone's skipping the foundation.
 
-You know what to make explicit and what the model can infer. That judgment doesn't live in a document. It comes from reps.
+The standard playbook: find a signal, generate personalization, wrap it in copy, send volume. The output sounds like AI because the model was never taught how to move a human being to act. It was just asked to write an email.
 
-Here's the part most people miss: hallucination is usually a context problem, not a prompt problem. The model fills gaps with plausible fiction because you never gave it the ground truth. No clever wording fixes that. Better context does.
+Gary Halbert and Eugene Schwartz never sent a cold email in their lives. But they understood attention, tension, and the exact register required to make a stranger care.
 
-Which is where the real shift happens.
+Those principles don't expire. They belong in your model instructions.
 
-Prompts are ephemeral and task-specific. Context is structural and durable: a reliable source of truth about the business, the ICP, the voice, the constraints. The model reasons better because it knows more, not because it was asked more cleverly.
+Wrong foundation = personalization makes it worse.
+Right foundation = personalization makes it dangerous.
 
-Prompt engineering is a skill. Context architecture is a system. One scales with you. The other scales with your whole org.
+The carousel below is how we build it.
+
+*(Carousel slide content not yet captured here - pull from Gamma if needed for reference.)*
 
 ---
 
-### 3. "Linguistic precision is the real AI skill gap" - Career/Positioning
-*Post #3*
+### 4. "Most people can't get AI to work" - Career/Positioning
+*~April 30, 2026 - 260 impressions*
 
 Most people can't get AI to work.
 
@@ -138,7 +180,8 @@ Turns out that was the advantage.
 
 ---
 
-### 4. "I stopped using the n8n UI. I build workflows from my terminal." - AI in Production
+### 5. "I stopped using the n8n UI. I build workflows from my terminal." - AI in Production / Multi-agent Architecture
+*~April 30, 2026 - 229 impressions*
 *Caption + carousel (7 slides, Gamma, Mystique dark theme)*
 
 **Caption:**
@@ -175,8 +218,65 @@ Stop name-dropping it. Build with it.
 
 ---
 
-### 5. "Everyone wants the agent that runs the whole job end to end" - Flagship: Deterministic vs. Agentic
-*Posted: July 21*
+### 6. "If you know n8n, you already speak LangGraph" - Multi-agent Architecture / GTM Infrastructure
+*~April 30, 2026 - 379 impressions*
+*Plain text, one-liner*
+
+If you know n8n, you already speak LangGraph.
+
+*(Single-line post - highest impressions of any post so far, worth studying for why brevity performed. No expanded framework text exists yet; a longer companion piece comparing the two paradigms is still backlog.)*
+
+---
+
+### 7. "Comment PROMPTS and I'll send you 300 of them" - Career/Positioning / GTM Infrastructure
+*~June 30, 2026 - 339 impressions, 2 comments*
+*(This is the as-published version. An earlier draft of the same thesis opened with "Stop saving prompts." directly - that draft is superseded by this hook, which tested a swipe-file-bait opener before subverting it.)*
+
+"Comment PROMPTS and I'll send you 300 of them."
+
+There's a name for what that swipe file becomes: the Collector's Fallacy. The belief that saving something is the same as knowing it. You bookmark the clever prompt, feel a hit of progress, and learn nothing. A stack of answers to a test you never studied for.
+
+The best prompt you'll ever write is the one you build in the moment, because you understand the problem in front of you. That judgment comes from reps. No swipe file gives you reps.
+
+Now the part that sounds like a contradiction: I do save prompts. Systematically.
+
+The difference is the system. A random library of clever wording is a junk drawer. A context layer is infrastructure: one version-controlled repo of structured markdown. ICP, personas, voice, product truths, the claims we never make. And the prompts that earned their place in production, versioned next to the context they depend on.
+
+Because hallucination is a context problem, not a prompt problem. The model fills gaps with plausible fiction when nobody hands it the source of truth. You can't word your way out of that. You can only inform your way out.
+
+A prompt saved without its context is a key without a door.
+
+Prompt engineering is a skill. Context architecture is infrastructure. One of them compounds.
+
+---
+
+### 8. "Don't be an AI sloperator" - Career/Positioning
+*~July 3, 2026 - 223 impressions*
+*Plain text*
+
+Don't be an AI sloperator.
+
+You can command the most powerful models on earth. But if you can't tell quality from slop, none of that reasoning matters. The tokens still burn. The output still misses. You just failed faster and at greater cost.
+
+That's the trap. You took an asset and turned it into a liability. The model didn't fail you. Your judgment did.
+
+Building a robot army is table stakes now. Anyone can spin up agents at scale. What's left is knowing what's actually worth pointing a model at.
+
+A chatbot that hallucinates every few answers. A memo no one reads. An agent chain that runs beautifully and solves nothing. That isn't higher-order thinking. It feels productive. It moves nothing.
+
+The operators who matter think at the systems level. They understand the real scope of a problem before they automate it. They make the unglamorous fixes to the legacy stuff nobody wants to touch. They can show you exactly where the time went and exactly where the cost dropped.
+
+That work isn't flashy. But it compounds.
+
+That's the difference between an operator and a sloperator.
+
+Everything else is just slop at scale.
+
+---
+
+### 9. "Everyone wants the agent that runs the whole job end to end" - Flagship: Deterministic vs. Agentic
+*~July 24, 2026 - 225 impressions*
+*GTM Infrastructure / Multi-agent Architecture*
 
 Everyone wants the agent that runs the whole job end to end. Push a button, walk away, the work does itself.
 
@@ -198,39 +298,32 @@ Autonomy isn't a starting point you buy. It's a graduation you earn.
 
 ---
 
-### 6. "Why one mega-prompt fails / decompose into specialized AI nodes" - Multi-agent Architecture
-*Carousel + caption*
+### 10. "Four totally real photos of me..." - Multi-agent Architecture
+*July 30, 2026 - 170 impressions*
+*Photo carousel (AI-generated images of himself), humor format*
 
-Stop asking one prompt to do five jobs.
+Here are four totally real photos of me to illustrate the different levels of AI agent architecture.
 
-Research the company. Write the email. Score the lead. Check quality. Format the output. One prompt, one pass.
+1.) Simple AI agent. One Claude chat, one task, one response. Me waving.
 
-Works in a demo. Falls apart in production.
+2.) Multi-agent chain. An n8n workflow with a researcher, a drafter, a QA step, and an eval step, each one checking the last one's work. Me, four times, on an assembly line.
 
-The model hallucinates details it wasn't given. You can't debug it because the whole thing is one black box. And your token costs are 10x what they should be.
+3.) Agentic AI. Claude Code with sub-agents pulling from a pile of MCPs and APIs, deciding what tools to call and when. Me wearing every hat I own while six smaller versions of me run around with wrenches and laptops.
 
-The fix is architectural, not prompt engineering.
+4.) Recursive long-horizon agent. An agent that runs 24/7, keeps its own state in a database, and keeps working whether or not I'm awake. Me in Super Saiyan mode with eight arms, because apparently that's what "long-horizon" looks like in my head.
 
-Decompose into specialized nodes. One agent researches. One writes. One QAs. One scores. Pick the right model per node - cheap and fast for filtering, heavy for reasoning.
-
-Something breaks? You know exactly where. Fix that node. Everything else keeps running.
-
-I've run this pattern in production: hundreds of CRM records daily through a four-agent chain. v1 was one mega-prompt. It hallucinated confidently and invented things that didn't exist. Decomposition fixed it.
-
-If your AI works in testing but fails in production, it's not a prompt problem. It's an architecture problem.
-
-**Carousel visual:** Side-by-side comparison - "The mega-prompt" (single prompt doing research/write/score/check/format, all competing for context -> hallucinations, undebuggable black box, 10x token cost) vs. "Decomposed agents" (Research agent -> Copywriter agent -> QA/evaluator -> Scoring agent -> no more hallucinations, transparent and debuggable, reduced token cost).
+I build these systems for a living and the pictures are just how I keep myself entertained while doing it.
 
 ---
 
 ## UNPUBLISHED / BACKLOG (for reference - not yet live)
 - "Every SOP is becoming a product you can sell"
 - "AI rollout done poorly is a company culture killer, augment not replace"
-- "Context Ops" concept post (branding decision open - term seeded but unlabeled in posts #2 and #3 above)
+- "Context Ops" concept post (branding decision open - term seeded but unlabeled in posts #7 above and the earlier superseded draft)
 - Orchestration layers vs. marketing automation (drafted, pending publish)
 - Hallucination war story (high priority)
 - Positive reply rate post
-- AI-personalized cold email framework
+- AI-personalized cold email framework (note: Outbound & email pillar is no longer empty - post #3 above already lives there; this would be the second entry)
 - Ambiguity-as-a-tool spinoff
 - "Giving away three production workflows" build-in-public post
 - Research -> copywriter -> QA -> scoring agent chain build walkthrough
@@ -240,3 +333,4 @@ If your AI works in testing but fails in production, it's not a prompt problem. 
 - MVP-first AI systems / batch vs event-driven / feedback loops / "fix the most embarrassing failure first"
 - RSS-to-LinkedIn content pipeline / RAG for internal docs / ROI measurement on long sales cycles
 - "Battle-tested in production" defined / self-taught path into GTM AI engineering / rebuilding the intelligence layer vs. bolting on AI
+- Longer companion piece expanding "If you know n8n, you already speak LangGraph" into a full n8n-vs-LangGraph framework (the one-liner outperformed on impressions - worth a follow-up testing whether the expanded version holds attention as well)
